@@ -2,7 +2,7 @@
 
 Quickly set up a new Mac.
 
-`rake install`
+`sudo rake install`
 
 This will install the following:
 
@@ -10,4 +10,3 @@ This will install the following:
 * RVM with Ruby
 * oh-my-zsh
 * Homebrew packages (see Brewfile)
-* IE VMs for VirtualBox

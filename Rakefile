@@ -7,7 +7,6 @@ task :install do
   Rake::Task['install:rvm'].invoke
   Rake::Task['install:ohmyzsh'].invoke
   sh 'brew bundle'
-  Rake::Task['install:ievms'].invoke
 end
 
 desc 'Installs system requirements'
@@ -30,6 +29,8 @@ namespace :install do
     system 'curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh'
   end
 
+  # shell script below wasn't working properly
+  # it was downloading the incorrect version of IE
   desc 'Installs IE VMs for VirtualBox'
   task :ievms do
     puts 'Installing IE VMs...'
