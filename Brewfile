@@ -8,7 +8,6 @@ upgrade
 tap homebrew/dupes
 tap phinze/cask
 tap caskroom/versions
-tap josegonzalez/php
 
 # Install standard packages
 install brew-cask
@@ -17,7 +16,6 @@ install mysql
 install node
 install memcached
 install phantomjs
-install php55
 install postgresql
 install redis
 install sqlite
