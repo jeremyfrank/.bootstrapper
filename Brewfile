@@ -27,7 +27,6 @@ cask install alfred
 cask install dropbox
 cask install firefox
 cask install gitx-rowanj
-cask install google-chrome
 cask install imagealpha
 cask install imageoptim
 cask install moom
