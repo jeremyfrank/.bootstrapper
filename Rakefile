@@ -5,6 +5,7 @@ desc 'Bootstrap a new Mac!'
 task :install do
   Rake::Task['install:homebrew'].invoke
   Rake::Task['install:rvm'].invoke
+  Rake::Task['install:nvm'].invoke
   Rake::Task['install:ohmyzsh'].invoke
   sh 'brew bundle'
 end
@@ -21,6 +22,14 @@ namespace :install do
   task :rvm do
     puts 'Installing RVM and Ruby...'
     system 'curl -sSL https://get.rvm.io | bash -s stable --ruby'
+  end
+
+  desc 'Installs NVM'
+  task :nvm do
+    puts 'Installing NVM and Node...'
+    system 'curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash'
+    system 'nvm install stable'
+    system 'nvm alias default stable'
   end
 
   desc 'Installs oh-my-zsh'

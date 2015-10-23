@@ -13,7 +13,6 @@ tap caskroom/versions
 install brew-cask
 install imagemagick
 install mysql
-install node
 install memcached
 install phantomjs
 install postgresql
