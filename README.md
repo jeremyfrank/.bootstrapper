@@ -11,3 +11,4 @@ This will install the following:
 * NVM with Node
 * oh-my-zsh
 * Homebrew packages (see Brewfile)
+* IE VMs for VirtualBox

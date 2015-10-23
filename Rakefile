@@ -8,6 +8,7 @@ task :install do
   Rake::Task['install:nvm'].invoke
   Rake::Task['install:ohmyzsh'].invoke
   sh 'brew bundle'
+  Rake::Task['install:ievms'].invoke
 end
 
 desc 'Installs system requirements'
@@ -43,6 +44,6 @@ namespace :install do
   desc 'Installs IE VMs for VirtualBox'
   task :ievms do
     puts 'Installing IE VMs...'
-    system 'curl -s https://raw.github.com/xdissent/ievms/master/ievms.sh | env IEVMS_VERSIONS="8 9 10 11" bash'
+    system 'curl -s https://raw.github.com/xdissent/ievms/master/ievms.sh | env IEVMS_VERSIONS="9 10 11 EDGE" bash'
   end
 end
