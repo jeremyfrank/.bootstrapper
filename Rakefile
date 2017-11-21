@@ -33,10 +33,10 @@ namespace :install do
     system 'nvm alias default stable'
   end
 
-  desc 'Installs oh-my-zsh'
+  desc 'Installs Oh My Zsh'
   task :ohmyzsh do
-    puts 'Installling oh-my-zsh...'
-    system 'curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh'
+    puts 'Installling Oh My Zsh...'
+    system 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"'
   end
 
   # shell script below wasn't working properly
