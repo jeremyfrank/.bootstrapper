@@ -9,6 +9,6 @@ This will install the following:
 * Homebrew
 * RVM with Ruby
 * NVM with Node
-* oh-my-zsh
+* Oh My Zsh
 * Homebrew packages (see Brewfile)
 * IE VMs for VirtualBox
