@@ -5,8 +5,6 @@ update
 upgrade
 
 # Add additional taps
-tap homebrew/dupes
-tap phinze/cask
 tap caskroom/versions
 
 # Install standard packages
