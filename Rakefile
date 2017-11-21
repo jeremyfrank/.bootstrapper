@@ -40,11 +40,9 @@ namespace :install do
     system 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"'
   end
 
-  # shell script below wasn't working properly
-  # it was downloading the incorrect version of IE
   desc 'Installs IE VMs for VirtualBox'
   task :ievms do
-    puts 'Installing IE VMs...'
-    system 'curl -s https://raw.github.com/xdissent/ievms/master/ievms.sh | env IEVMS_VERSIONS="9 10 11 EDGE" bash'
+    puts 'Installing Microsoft Virtual Machines...'
+    system 'curl -s https://raw.githubusercontent.com/xdissent/ievms/master/ievms.sh | env IEVMS_VERSIONS="11 EDGE" bash'
   end
 end
