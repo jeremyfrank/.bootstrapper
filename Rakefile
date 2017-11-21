@@ -25,12 +25,13 @@ namespace :install do
     system 'curl -sSL https://get.rvm.io | bash -s stable --ruby'
   end
 
-  desc 'Installs NVM'
+  desc 'Installs NVM and Node'
   task :nvm do
     puts 'Installing NVM and Node...'
     system 'curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash'
-    system 'nvm install stable'
-    system 'nvm alias default stable'
+    system 'nvm install node'
+    system 'nvm alias default node'
+    system 'npm install --global trash-cli' # https://github.com/sindresorhus/trash
   end
 
   desc 'Installs Oh My Zsh'
