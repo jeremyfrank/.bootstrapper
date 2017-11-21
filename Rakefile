@@ -13,10 +13,10 @@ end
 
 desc 'Installs system requirements'
 namespace :install do
-  desc 'Update or install Homebrew'
+  desc 'Installs Homebrew'
   task :homebrew do
     puts 'Installling Homebrew...'
-    system 'ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"'
+    system '/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
   end
 
   desc 'Installs RVM and Ruby'
