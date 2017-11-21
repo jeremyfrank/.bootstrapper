@@ -17,26 +17,23 @@ install postgresql
 install redis
 install sqlite
 install wget
+install yarn
 install z
 
 # Install binary packages (i.e. standard apps)
-cask install alfred
 cask install dropbox
 cask install firefox
-cask install gitx-rowanj
+cask install harvest
 cask install imagealpha
 cask install imageoptim
+cask install mamp
 cask install moom
-cask install mou
+cask install rowanj-gitx
 cask install sequel-pro
-cask install skype
 cask install spotify
+cask install sublime-text
 cask install transmit
 cask install virtualbox
-cask install virtualhostx
-
-# Install alternate versions of binary packages (via caskroom/versions)
-cask install sublime-text3
 
 # Remove outdated versions from the cellar
 cleanup
