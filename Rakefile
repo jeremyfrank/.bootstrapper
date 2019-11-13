@@ -4,8 +4,7 @@ require 'erb'
 desc 'Bootstrap a new Mac!'
 task :install do
   Rake::Task['install:homebrew'].invoke
-  Rake::Task['install:rvm'].invoke
-  Rake::Task['install:nvm'].invoke
+  Rake::Task['install:asdf'].invoke
   Rake::Task['install:ohmyzsh'].invoke
   sh 'brew bundle'
   Rake::Task['install:ievms'].invoke
@@ -15,34 +14,23 @@ desc 'Installs system requirements'
 namespace :install do
   desc 'Installs Homebrew'
   task :homebrew do
-    puts 'Installling Homebrew...'
+    puts 'Installing Homebrew...'
     system '/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
   end
 
-  desc 'Installs RVM and Ruby'
-  task :rvm do
-    puts 'Installing RVM and Ruby...'
-    system 'curl -sSL https://get.rvm.io | bash -s stable --ruby'
-  end
+  desc 'Installs asdf'
+  task :asdf do
+    puts 'Installing asdf...'
+    system 'git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.5'
 
-  desc 'Installs NVM and Node'
-  task :nvm do
-    puts 'Installing NVM and Node...'
-    system 'curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash'
-    system 'nvm install node'
-    system 'nvm alias default node'
-    system 'npm install --global trash-cli' # https://github.com/sindresorhus/trash
+    puts 'Adding asdf to shell...'
+    system 'echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bash_profile'
+    system 'echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bash_profile'
   end
 
   desc 'Installs Oh My Zsh'
   task :ohmyzsh do
-    puts 'Installling Oh My Zsh...'
+    puts 'Installing Oh My Zsh...'
     system 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"'
-  end
-
-  desc 'Installs IE VMs for VirtualBox'
-  task :ievms do
-    puts 'Installing Microsoft Virtual Machines...'
-    system 'curl -s https://raw.githubusercontent.com/xdissent/ievms/master/ievms.sh | env IEVMS_VERSIONS="11 EDGE" bash'
   end
 end
