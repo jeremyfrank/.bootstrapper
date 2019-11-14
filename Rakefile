@@ -20,11 +20,11 @@ namespace :install do
   desc 'Installs asdf'
   task :asdf do
     puts 'Installing asdf...'
-    system 'git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.5'
+    system 'sh -c "$(git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.5)"'
 
     puts 'Adding asdf to shell...'
-    system 'echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bash_profile'
-    system 'echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bash_profile'
+    system 'sh -c "$(echo \'\n. $HOME/.asdf/asdf.sh\' >> ~/.bash_profile)"'
+    system 'sh -c "$(echo \'\n. $HOME/.asdf/completions/asdf.bash\' >> ~/.bash_profile)"'
   end
 
   desc 'Installs Oh My Zsh'
