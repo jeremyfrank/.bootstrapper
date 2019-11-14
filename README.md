@@ -7,8 +7,6 @@ Quickly set up a new Mac.
 This will install the following:
 
 * Homebrew
-* RVM with Ruby
-* NVM with Node
+* asdf
 * Oh My Zsh
 * Homebrew packages (see Brewfile)
-* IE VMs for VirtualBox
