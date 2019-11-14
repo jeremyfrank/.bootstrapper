@@ -6,14 +6,11 @@ upgrade
 
 # Install standard packages
 install imagemagick
-install mysql
 install memcached
-install phantomjs
 install postgresql
 install redis
 install sqlite
 install wget
-install yarn
 install z
 
 # Remove outdated versions from the cellar
