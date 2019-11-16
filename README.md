@@ -2,7 +2,7 @@
 
 Quickly set up a new Mac.
 
-`sudo rake install`
+`rake install`
 
 This will install the following:
 
