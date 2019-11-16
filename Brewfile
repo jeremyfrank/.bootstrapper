@@ -4,14 +4,21 @@ update
 # Upgrade any already-installed formulae
 upgrade
 
-# Install standard packages
-install imagemagick
-install memcached
-install postgresql
-install redis
-install sqlite
+# Install packages for asdf
+coreutils
+automake
+autoconf
+openssl
+libyaml
+readline
+libxslt
+libtool
+unixodbc
+unzip
+curl
+
+# Install other packages
 install wget
-install z
 
 # Remove outdated versions from the cellar
 cleanup
