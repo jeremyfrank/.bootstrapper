@@ -5,17 +5,17 @@ update
 upgrade
 
 # Install packages for asdf
-coreutils
-automake
-autoconf
-openssl
-libyaml
-readline
-libxslt
-libtool
-unixodbc
-unzip
-curl
+install coreutils
+install automake
+install autoconf
+install openssl
+install libyaml
+install readline
+install libxslt
+install libtool
+install unixodbc
+install unzip
+install gpg
 
 # Install other packages
 install wget
