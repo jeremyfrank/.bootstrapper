@@ -15,7 +15,7 @@ install libxslt
 install libtool
 install unixodbc
 install unzip
-install gpg
+install gnupg
 
 # Install other packages
 install wget
