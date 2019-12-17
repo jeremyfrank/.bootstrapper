@@ -9,4 +9,5 @@ This will install the following:
 * Homebrew
 * asdf
 * Oh My Zsh
+* Composer
 * Homebrew packages (see Brewfile)
