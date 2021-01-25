@@ -15,23 +15,19 @@ namespace :install do
   desc 'Installs Homebrew'
   task :homebrew do
     puts 'Installing Homebrew...'
-    system '/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
+    system '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
   end
 
   desc 'Installs asdf'
   task :asdf do
     puts 'Installing asdf...'
-    system 'sh -c "$(git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.5)"'
-
-    puts 'Adding asdf to shell...'
-    system 'sh -c "$(echo \'\n. $HOME/.asdf/asdf.sh\' >> ~/.bash_profile)"'
-    system 'sh -c "$(echo \'\n. $HOME/.asdf/completions/asdf.bash\' >> ~/.bash_profile)"'
+    system 'sh -c "$(git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0)"'
   end
 
   desc 'Installs Oh My Zsh'
   task :ohmyzsh do
     puts 'Installing Oh My Zsh...'
-    system 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"'
+    system 'sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"'
   end
 
   desc 'Installs Composer'
