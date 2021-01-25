@@ -8,7 +8,6 @@ task :install do
   Rake::Task['install:asdf'].invoke
   Rake::Task['install:ohmyzsh'].invoke
   Rake::Task['install:composer'].invoke
-  sh 'brew bundle'
 end
 
 desc 'Installs system requirements'
