@@ -10,4 +10,3 @@ This will install the following:
 * asdf
 * Oh My Zsh
 * Composer
-* Homebrew packages (see Brewfile)
